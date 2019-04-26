@@ -2,7 +2,7 @@
 
 <%shared>;
  my $active_member;
- my $is_under_18 = 0;
+ my $is_under_18 = 0;   
  my $reqd = "*";
  my $name_on_site_ref;
  my $listing_tag_ref;
