@@ -8,7 +8,7 @@
  my $listing_tag_ref;
  my @hintopts = (width => 400, height=> 300, name => 'hint');
 </%shared>
-d,fgnmlkds mjglmpkmsd;fghl,v',fkgp[ok
+
 <%args>
  $part
 </%args>
