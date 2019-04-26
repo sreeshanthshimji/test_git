@@ -1,5 +1,5 @@
 %# $Id: model.mas,v 1.46 2007/10/30 18:14:23 hvv Exp $
-
+#changed 
 <%shared>;
  my $active_member;
  my $is_under_18 = 0;   
