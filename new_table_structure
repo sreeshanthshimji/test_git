@@ -1,0 +1,54 @@
+CREATE TABLE listing_contact(
+	listing_contact_id INT NOT NULL,
+	listing_id int(10) unsigned NOT NULL default 0,
+	addr_street_1 varchar(100),
+	addr_street_2 varchar(100),
+	addr_city varchar(100),
+	us_state varchar(100),
+	addr_province varchar(100),
+	addr_zip varchar(20),
+	country varchar(100),
+	phone_home varchar(25),
+	phone_fax varchar(25),
+	phone_work varchar(25),
+	phone_work_ext varchar(255),
+	phone_mobile varchar(25),
+	phone_carrier varchar(100),
+	intern_phone_home varchar(25),
+	intern_phone_fax varchar(25),
+	intern_phone_work varchar(25),
+	intern_phone_work_ext varchar(255),
+	intern_phone_mobile varchar(25),
+	contact_emerg varchar(255),
+	phone_emerg varchar(25),
+	inter_contact_emerg varchar(255),
+	intern_phone_emerg varchar(25),
+	email varchar(50),
+	email_optional varchar(50),
+	phone_email varchar(100),
+	mobile_email varchar(100),
+	copy_info tinyint(1),
+	PRIMARY KEY (listing_contact_id),
+	FOREIGN KEY (listing_id) REFERENCES listing(listing_id) ON DELETE CASCADE
+);
+
+create table test(
+	hello int(10),
+	foreign key(hello) references listing(listing_id)
+);
+
+
+CREATE TABLE test(
+   prd_id int not null auto_increment primary key,
+   cat_id int(10) unsigned not null,
+   FOREIGN KEY fk_cat(cat_id)
+   REFERENCES model(listing_id)
+   ON UPDATE CASCADE
+   ON DELETE RESTRICT
+)
+
+
+SELECT referenced_table_name, referenced_column_name
+FROM information_schema.key_column_usage
+WHERE table_name = 'test2'
+AND column_name = 'hello'
